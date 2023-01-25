@@ -1,0 +1,56 @@
+.navTop {
+  background-color: brown;
+  color: white;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navTop__left {
+  text-decoration: none;
+  display: flex;
+  list-style: none;
+}
+
+.navTop__left li {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.navTop__left li:hover {
+  text-decoration: underline;
+}
+
+.navTop__right {
+  display: flex;
+  align-items: center;
+}
+
+.navTop__right div {
+  padding: 0 10px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  color: red;
+}
+
+.logout {
+  cursor: pointer;
+  padding: 15px 20px !important;
+  color: white;
+  background-color: rgb(248, 87, 114);
+  font-weight: bold;
+}
+
+.register {
+  padding: 15px 5px !important;
+  color: white;
+  background-color: rgb(248, 87, 114);
+  font-weight: bold;
+}
