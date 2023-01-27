@@ -1,0 +1,12 @@
+.navBottom {
+  background-color: rgb(108, 35, 35);
+  color: white;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBottom__left__logoName {
+  cursor: pointer;
+}

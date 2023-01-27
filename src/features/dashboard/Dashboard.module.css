@@ -1,0 +1,12 @@
+.category {
+  display: flex;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.navlink {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  padding: 0 20px;
+}

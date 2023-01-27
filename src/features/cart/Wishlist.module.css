@@ -1,0 +1,20 @@
+.wishlistWrapper {
+  padding: 10px 100px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.navlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}

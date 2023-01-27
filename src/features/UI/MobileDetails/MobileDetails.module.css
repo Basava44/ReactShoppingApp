@@ -1,0 +1,55 @@
+.detailsWrapper {
+  margin: 40px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.detailsRight {
+  padding: 10px 30px;
+}
+
+.buttons {
+  display: flex;
+  margin: 20px 0;
+}
+
+.buttons button {
+  margin: 0 10px;
+}
+
+.mobileName {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.color {
+  font-size: 18px;
+}
+
+.features {
+  margin-top: 10px;
+}
+
+.featuresTitle {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.features ul {
+  padding-left: 30px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.button {
+  background-color: brown !important;
+  color: white !important;
+}
+
+.button:disabled {
+  background-color: rgba(128, 128, 128, 0.713) !important;
+}

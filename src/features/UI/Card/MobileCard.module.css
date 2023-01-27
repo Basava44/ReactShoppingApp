@@ -1,0 +1,32 @@
+.mobileCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 20px;
+}
+
+.image {
+  height: 300px;
+  margin: 0 auto;
+}
+
+.details {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.name {
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.button {
+  margin-top: 10px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 8px;
+}
