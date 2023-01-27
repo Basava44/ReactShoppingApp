@@ -11,9 +11,11 @@ import {
 } from "../../cart/cartSlice";
 
 import styles from "./MobileDetails.module.css";
+import { useNavigate } from "react-router-dom";
 
 const MobileDetails = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const isLoggedIn = useSelector((state) => {
     return state.user.loggedIn;
@@ -48,6 +50,13 @@ const MobileDetails = () => {
     } else {
       alert("Please LogIn/Register");
     }
+  };
+
+  const goToWishlist = () => {
+    navigate("/wishlist");
+  };
+  const goToCart = () => {
+    navigate("/cart");
   };
 
   return (
@@ -92,21 +101,19 @@ const MobileDetails = () => {
               variant="contained"
               startIcon={<AddIcon />}
               fullWidth
-              onClick={addToWishlist}
-              disabled={wishlisted}
+              onClick={wishlisted ? goToWishlist : addToWishlist}
               className={styles.button}
             >
-              Wishlist
+              {wishlisted ? "Go To Wishlist" : "Wishlist"}
             </Button>
             <Button
               variant="contained"
               endIcon={<AddIcon />}
               fullWidth
-              onClick={addToCart}
-              disabled={carted}
+              onClick={carted ? goToCart : addToCart}
               className={styles.button}
             >
-              Cart
+              {carted ? "Go to cart" : "Cart"}
             </Button>
           </div>
         </div>

@@ -18,3 +18,10 @@
   color: black;
   font-weight: 500;
 }
+
+.wishlistItems {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
