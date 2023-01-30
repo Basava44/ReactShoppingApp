@@ -39,7 +39,6 @@ const App = () => {
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />}>
-          {/* <Route index element={<Samsung />} /> */}
           <Route path="samsung" element={<Samsung />}></Route>
           <Route path="apple" element={<Apple />}></Route>
           <Route path="oneplus" element={<Oneplus />}></Route>
