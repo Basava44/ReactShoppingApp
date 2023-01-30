@@ -3,7 +3,7 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 import styles from "./Dashboard.module.css";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   const navLinkStyles = ({ isActive }) => {
     return {
       fontWeight: isActive ? "bold" : "normal",

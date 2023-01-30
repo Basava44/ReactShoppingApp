@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { signIn } from "./userSlice";
 
 import { useNavigate } from "react-router-dom";
+import { Checkbox, FormControlLabel } from "@mui/material";
 
 const theme = createTheme();
 
@@ -21,6 +22,7 @@ export default function SignIn() {
   const dispatch = useDispatch();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [saveUser, setSaveuser] = React.useState(true);
 
   const navigate = useNavigate();
 
@@ -39,11 +41,20 @@ export default function SignIn() {
         email: email,
         password: password,
       });
+      if (saveUser) {
+        localStorage.setItem("loginData", JSON.stringify({ email, password }));
+      } else {
+        localStorage.clear();
+      }
       dispatch(signIn(email, password));
       navigate("/dashboard");
       setEmail("");
       setPassword("");
     }
+  };
+
+  const saveUserForReference = (event) => {
+    setSaveuser(event.target.checked);
   };
 
   return (
@@ -91,6 +102,19 @@ export default function SignIn() {
               value={password}
               onChange={changePasswordHandler}
             />
+            <Grid item xs={12}>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    value="allowExtraEmails"
+                    color="primary"
+                    checked={saveUser}
+                    onChange={saveUserForReference}
+                  />
+                }
+                label="Save for Future reference"
+              />
+            </Grid>
             <Button
               type="submit"
               fullWidth

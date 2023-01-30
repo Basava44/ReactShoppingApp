@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Dashboard from "./features/dashboard/Dashboard";
 
 import SignIn from "./features/login/SignIn";
@@ -17,8 +18,18 @@ import RequireData from "./features/UI/RequireData/RequireData";
 import "./App.css";
 import Cart from "./features/cart/Cart";
 import Wishlist from "./features/cart/Wishlist";
+import { useDispatch } from "react-redux";
+import { signIn } from "./features/login/userSlice";
 
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const loginData = JSON.parse(localStorage.getItem("loginData"));
+    if (loginData) {
+      dispatch(signIn(loginData.email, loginData.password));
+    }
+  }, [dispatch]);
+
   return (
     <BrowserRouter>
       <Navbar />
@@ -64,5 +75,4 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
 export default App;

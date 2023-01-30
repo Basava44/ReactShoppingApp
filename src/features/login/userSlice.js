@@ -43,6 +43,7 @@ const userSlice = createSlice({
     signOut: {
       reducer: (state) => {
         state.loggedIn = false;
+        localStorage.clear();
       },
     },
   },

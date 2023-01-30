@@ -20,14 +20,30 @@ const theme = createTheme();
 export default function SignUp() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [saveUser, setSaveuser] = React.useState(true);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     if (data.get("email") && data.get("password")) {
       dispatch(signUp(data.get("email"), data.get("password")));
+      if (saveUser) {
+        localStorage.setItem(
+          "loginData",
+          JSON.stringify({
+            email: data.get("email"),
+            password: data.get("password"),
+          })
+        );
+      } else {
+        localStorage.clear();
+      }
       navigate("/dashboard");
     }
+  };
+
+  const saveUserForReference = (event) => {
+    setSaveuser(event.target.checked);
   };
 
   return (
@@ -108,9 +124,14 @@ export default function SignUp() {
               <Grid item xs={12}>
                 <FormControlLabel
                   control={
-                    <Checkbox value="allowExtraEmails" color="primary" />
+                    <Checkbox
+                      value="allowExtraEmails"
+                      color="primary"
+                      checked={saveUser}
+                      onChange={saveUserForReference}
+                    />
                   }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="Save for Future reference"
                 />
               </Grid>
             </Grid>
