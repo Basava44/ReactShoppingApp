@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dashboard/apple/static/css/main.b5398559.css",
-    "main.js": "/dashboard/apple/static/js/main.176f7daf.js",
-    "static/js/787.6962f9d7.chunk.js": "/dashboard/apple/static/js/787.6962f9d7.chunk.js",
-    "index.html": "/dashboard/apple/index.html",
-    "main.b5398559.css.map": "/dashboard/apple/static/css/main.b5398559.css.map",
-    "main.176f7daf.js.map": "/dashboard/apple/static/js/main.176f7daf.js.map",
-    "787.6962f9d7.chunk.js.map": "/dashboard/apple/static/js/787.6962f9d7.chunk.js.map"
+    "main.css": "/ReactShoppingApp/static/css/main.b5398559.css",
+    "main.js": "/ReactShoppingApp/static/js/main.abdce2e6.js",
+    "static/js/787.6962f9d7.chunk.js": "/ReactShoppingApp/static/js/787.6962f9d7.chunk.js",
+    "index.html": "/ReactShoppingApp/index.html",
+    "main.b5398559.css.map": "/ReactShoppingApp/static/css/main.b5398559.css.map",
+    "main.abdce2e6.js.map": "/ReactShoppingApp/static/js/main.abdce2e6.js.map",
+    "787.6962f9d7.chunk.js.map": "/ReactShoppingApp/static/js/787.6962f9d7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5398559.css",
-    "static/js/main.176f7daf.js"
+    "static/js/main.abdce2e6.js"
   ]
 }
