@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 import Dashboard from "./features/dashboard/Dashboard";
 
 import SignIn from "./features/login/SignIn";
@@ -29,6 +32,8 @@ const App = () => {
       dispatch(signIn(loginData.email, loginData.password));
     }
   }, [dispatch]);
+
+  Aos.init();
 
   return (
     <BrowserRouter>

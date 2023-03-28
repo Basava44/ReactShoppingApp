@@ -64,7 +64,12 @@ const MobileDetails = () => {
       <div className={styles.detailsWrapper}>
         <div className={styles.detailsLeft}>
           <div className={styles.image}>
-            <img src={mobileData.imageUrl} alt={mobileData.model} />
+            <img
+              src={mobileData.imageUrl}
+              alt={mobileData.model}
+              data-aos="flip-left"
+              data-aos-duration="1000"
+            />
           </div>
         </div>
         <div className={styles.detailsRight}>

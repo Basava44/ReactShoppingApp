@@ -16,7 +16,12 @@ const MobileCard = ({ data }) => {
   };
 
   return (
-    <Card sx={{ width: 310 }} className={styles.mobileCard}>
+    <Card
+      sx={{ width: 310 }}
+      className={styles.mobileCard}
+      data-aos="fade-up"
+      data-aos-duration="900"
+    >
       <img className={styles.image} src={data.imageUrl} alt={data.model} />
       <div className={styles.details}>
         <p className={styles.name}>{data.model.toUpperCase()}</p>

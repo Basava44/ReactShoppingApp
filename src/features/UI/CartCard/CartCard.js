@@ -30,7 +30,12 @@ const CartCard = ({ mobileData }) => {
   };
 
   return (
-    <Card sx={{ width: 310 }} className={styles.cardWrapper}>
+    <Card
+      sx={{ width: 310 }}
+      className={styles.cardWrapper}
+      data-aos="flip-right"
+      data-aos-duration="1000"
+    >
       <img
         src={mobileData.imageUrl}
         alt={mobileData.id}
